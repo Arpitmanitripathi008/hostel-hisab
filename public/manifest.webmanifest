@@ -1,0 +1,14 @@
+{
+  "name": "Hostel Hisab",
+  "short_name": "Hostel Hisab",
+  "description": "Track hostel tiffin, milk, payments and custom daily records.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
