@@ -4,3 +4,41 @@ html,body{margin:0;min-height:100%;} body{font-family:Arial,Helvetica,sans-serif
 @media(max-width:1000px){.cards,.cards.no-milk{grid-template-columns:repeat(2,1fr)}.sidebar{width:200px}.mealgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.topbar{padding:0 15px}.layout{display:block}.sidebar{position:static;width:100%;height:auto;display:flex;overflow:auto;padding:10px;border-right:0;border-bottom:1px solid var(--line)}.navbtn{width:auto;white-space:nowrap;margin:0 4px 0 0}.main{padding:18px 14px 30px}.cards,.cards.no-milk,.two,.mealgrid,.formgrid,.dashboard-trackers,.report-grid{grid-template-columns:1fr}.pagehead{flex-direction:column}.calendar{gap:4px}.day{min-height:74px;padding:6px}.dot{font-size:9px;padding:2px 3px}.setting-row{grid-template-columns:28px 55px 1fr}.setting-row input[type=number]{max-width:none!important}.setting-row .btn{grid-column:2/-1;justify-self:start}.date-nav input{width:135px}.tracker-mini{align-items:flex-start;flex-direction:column}.dashboard-main{grid-template-columns:1fr}}
 .auth-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg)}.auth-card{width:min(440px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}.auth-card h1{font-size:28px}.linkbtn{border:0;background:transparent;color:var(--primary);font-weight:700;margin-top:16px;cursor:pointer;width:100%;padding:8px}.error-notice{background:#fef2f2;color:#991b1b}.install-btn{display:none}@media(max-width:720px){.install-btn{display:inline-flex}.topbar .muted{display:none}.auth-card{padding:22px}.brand{font-size:18px}}
+.password-row{display:flex;align-items:stretch;gap:8px}.password-row input{flex:1}.password-toggle{border:1px solid #d9dee8;background:#fff;color:var(--primary);border-radius:10px;padding:0 13px;font-weight:700;min-width:62px}.password-toggle:hover{background:#f3f6fb}
+
+/* V7 mobile-first and milk status improvements */
+.milk-today.milk-saved,.milk-editor.milk-saved{border-color:#86efac;background:#f0fdf4}.saved-badge{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:#dcfce7;color:#166534;font-size:12px;font-weight:800}.milk-saved-summary{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.milk-saved-summary strong{font-size:25px}.milk-saved-summary .btn{margin-left:auto}.saved-action{background:#dcfce7;color:#166534;border:1px solid #86efac}.advance-badge{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-weight:800}.milk-edit-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:end}.verify-notice{background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe}.verify-notice strong{display:inline-block;margin-bottom:4px}
+@media(max-width:720px){
+  .topbar{height:auto;min-height:62px;padding:10px 12px;gap:10px;align-items:center}
+  .topbar .row{gap:6px}
+  .topbar .btn{padding:8px 9px;font-size:12px}
+  .topbar .brand-badge{width:34px;height:34px}
+  .sidebar{position:sticky;top:0;z-index:9;padding:8px 10px;background:#fff;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+  .navbtn{padding:9px 11px;font-size:13px;border:1px solid transparent}
+  .navbtn.active{border-color:#bfdbfe}
+  .main{padding:16px 12px 28px}
+  .pagehead{gap:12px;margin-bottom:16px}
+  h1{font-size:25px}
+  h2{font-size:18px}
+  .card{padding:16px;border-radius:14px}
+  .between{align-items:flex-start}
+  .date-nav{width:100%;justify-content:space-between}
+  .date-nav input{flex:1;width:auto;min-width:0}
+  .mealgrid{gap:10px}
+  .meal{padding:14px}
+  .meal .row .btn{flex:1}
+  .milk-edit-row{grid-template-columns:1fr}
+  .milk-edit-row>.btn{width:100%}
+  .milk-saved-summary .btn{margin-left:0;width:100%}
+  .advance-badge{font-size:12px}
+  .setting-row{grid-template-columns:28px 48px minmax(0,1fr)}
+  .setting-row input[type=number]{grid-column:2/-1}
+  .setting-row .btn{grid-column:2/-1;width:100%}
+  .tablewrap{margin:0 -4px}
+  th,td{padding:9px 8px;font-size:13px}
+  .formgrid{gap:12px}
+  .footer{text-align:center}
+}
+@media(min-width:721px){
+  .mobile-only{display:none!important}
+}

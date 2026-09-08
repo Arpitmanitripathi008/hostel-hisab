@@ -76,3 +76,16 @@ This first cloud version intentionally keeps the existing app's `Data` object in
 The table is protected by Row Level Security so a signed-in user can only read/write their own `hostel_data` row.
 
 A later version can normalize meals, milk, payments, and trackers into separate Postgres tables if we need advanced multi-device queries, sharing, or analytics.
+
+
+## Password recovery (V7)
+
+V7 includes **Forgot password?**, secure reset-password, and **Change password** in Settings.
+
+After deploying to Vercel, open **Supabase → Authentication → URL Configuration**:
+
+1. Set **Site URL** to your production Hostel Hisab URL.
+2. Under **Redirect URLs**, add the production URL (exact path or a suitable wildcard), for example `https://your-project.vercel.app/**`.
+3. Keep `http://localhost:3000/**` if you still test locally.
+
+The app calls `resetPasswordForEmail()` with a redirect back to the current site origin, then listens for Supabase's `PASSWORD_RECOVERY` event before calling `updateUser()` with the new password.

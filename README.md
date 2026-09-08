@@ -21,3 +21,10 @@ npm install
 npm run dev
 ```
 Then open http://localhost:3000
+
+
+### V7 security features
+- Forgot password email recovery
+- Secure new-password screen
+- Change password from Settings
+- Show/hide password controls
